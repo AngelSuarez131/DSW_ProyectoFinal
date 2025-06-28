@@ -12,18 +12,18 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //@Configuration
 //@EnableWebSecurity
 public class SpringBootSecurity {
-    
+
 	/*@Autowired
 	private UserDetailsService userDetailService;
-	
+
 	@Autowired
     private BCryptPasswordEncoder passwordEncoder;
-	
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder);
 	}
-    
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable().authorizeRequests()
@@ -32,5 +32,5 @@ public class SpringBootSecurity {
 		.and().formLogin().loginPage("/usuario/login")
 		.permitAll().defaultSuccessUrl("/usuario/acceder");
 	}*/
-	
+
 }
