@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreporte_ecommerce" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="871489bc-0311-4d25-8c29-6abf472ef4b9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysql-examenFinal"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="360"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="629"/>
+	<queryString>
+		<![CDATA[SELECT
+    d.producto_id,
+    p.nombre AS nombre_producto,
+    SUM(d.cantidad) AS cantidad_vendida
+FROM
+    ecommerce.detalles d
+JOIN
+    ecommerce.productos p ON d.producto_id = p.id
+GROUP BY
+    d.producto_id, p.nombre
+ORDER BY
+    cantidad_vendida DESC]]>
+	</queryString>
+	<field name="producto_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="producto_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="producto_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="detalles"/>
+	</field>
+	<field name="nombre_producto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre_producto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<field name="cantidad_vendida" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad_vendida"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidad_vendida"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="278">
+			<bar3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="81" y="30" width="393" height="210" uuid="765d442b-d13e-4bb0-b899-32b499592089"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["CANTIDAD"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{producto_id}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{cantidad_vendida}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>
