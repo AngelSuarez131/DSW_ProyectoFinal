@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cibertec.proyecto</groupId>
-	<artifactId>proyecto-ecommerce</artifactId>
+	<artifactId>proyectoDSW</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>proyecto-ecommerce</name>
 	<description>Proyecto Final LP2</description>
