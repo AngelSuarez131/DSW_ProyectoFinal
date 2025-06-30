@@ -10,7 +10,7 @@
 	<parameter name="REPOR_DIR" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT *
-FROM ecommerce.productos
+FROM GamerReach.productos
 WHERE 1=1
 AND ($P{P_DESCRIPCION} IS NULL OR descripcion LIKE CONCAT('%', $P{P_DESCRIPCION}, '%'))
 AND ($P{P_PRECIO} IS NULL OR precio = $P{P_PRECIO})]]>
@@ -72,7 +72,7 @@ AND ($P{P_PRECIO} IS NULL OR precio = $P{P_PRECIO})]]>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="22" isBold="true"/>
 				</textElement>
-				<text><![CDATA[SISTEMA DE VENTAS - ECOMMERCE]]></text>
+				<text><![CDATA[SISTEMA DE VENTAS - GamerReach]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -302,7 +302,7 @@ AND ($P{P_PRECIO} IS NULL OR precio = $P{P_PRECIO})]]>
 			<subreport>
 				<reportElement x="10" y="90" width="300" height="220" uuid="80295951-a052-4544-83a1-4e95ce90abcd"/>
 				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				<subreportExpression><![CDATA[$P{REPOR_DIR}+"subreporte_ecommerce.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{REPOR_DIR}+"subreporte_GamerReach.jasper"]]></subreportExpression>
 			</subreport>
 		</band>
 	</summary>

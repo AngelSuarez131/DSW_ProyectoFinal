@@ -35,7 +35,7 @@ public class ReporteController {
 	public ResponseEntity<InputStreamResource> verReporte(@RequestParam Map<String, Object> parameters) {
 		System.out.println("ReporteController - report");
 		try {
-			byte[] data = reporteService.generaReporte("Productos_ecommerce", parameters);
+			byte[] data = reporteService.generaReporte("GamerReach", parameters);
 			InputStreamResource resource = new InputStreamResource(new ByteArrayInputStream(data));
 
 			return ResponseEntity.ok()
@@ -53,7 +53,7 @@ public class ReporteController {
 	@GetMapping("/reportPreview")
 	public String previewReporte(@RequestParam Map<String, Object> parameters, Model model) {
 		try {
-			String htmlReport = reporteService.generaReportetHtml("Productos_ecommerce", parameters);
+			String htmlReport = reporteService.generaReportetHtml("GamerReach", parameters);
 			model.addAttribute("titulo", "Reportes del Sistema");
 			model.addAttribute("subtitulo", "Reporte - Previsualizacion de Reporte");
             model.addAttribute("reporte", htmlReport);
