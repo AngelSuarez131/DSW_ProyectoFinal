@@ -1,91 +1,91 @@
-<!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<!--<!DOCTYPE html>-->
+<!--<html lang="es" xmlns:th="http://www.thymeleaf.org">-->
 
-<head>
+<!--<head>-->
 
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<!--<meta charset="utf-8">-->
+<!--<meta name="viewport"-->
+<!--	content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--<meta name="description" content="">-->
+<!--<meta name="author" content="">-->
 
-	<title>GameReach</title>
-
-
-<!-- Bootstrap core CSS -->
-<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
-	rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link th:href="@{/css/heroic-features.css}" rel="stylesheet">
-
-</head>
-
-<body>
-
-	<!-- Navigation -->
-	<div th:replace="~{administrador/template_admin.html::header}"></div>
-
-	<!-- Page Content -->
-	<div class="container">
+<!--	<title>GameReach</title>-->
 
 
-		<!-- Page Heading/Breadcrumbs -->
-		<h1 class="mt-4 mb-3">
-			GamerReach <small>Ordenes</small>
-		</h1>
+<!--&lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
+<!--<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"-->
+<!--	rel="stylesheet">-->
 
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-			<li class="breadcrumb-item active">Reportes</li>
-		</ol>
+<!--&lt;!&ndash; Custom styles for this template &ndash;&gt;-->
+<!--<link th:href="@{/css/heroic-features.css}" rel="stylesheet">-->
 
-		<!-- Blog Post -->
-		<main class="main">
-			<!-- Hero Section -->
-			<section id="hero" class="hero section">
+<!--</head>-->
 
-				<div class="container">
-					<div class="row gy-4">
-						<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-							<h1 data-aos="fade-up" th:text="${titulo}">Reporte de Productos</h1>
-							<h3 data-aos="fade-up" th:text="${subtitulo}">titulo</h3>
-						</div>
+<!--<body>-->
 
-					</div>
-				</div>
+<!--	&lt;!&ndash; Navigation &ndash;&gt;-->
+<!--	<div th:replace="~{administrador/template_admin.html::header}"></div>-->
 
-			</section><!-- /Hero Section -->
+<!--	&lt;!&ndash; Page Content &ndash;&gt;-->
+<!--	<div class="container">-->
 
-			<section id="reportePreview">
-				<div class="container">
-					<form action="/reportes/report" method="get">
-						<input type="hidden" name="parameter1" th:value="${parameter1}">
-						<input type="hidden" name="parameter2" th:value="${parameter2}">
-						<button type="submit" class="btn btn-primary btn-sm" th:text="'Exportar PDF'" title="Exportar a PDF..."></button>
-					</form>
 
-					<!-- parámetro Reporte -->
-					<div class="card-body bg-light justify-content-center align-items-center">
-						<div th:utext="${reporte}"></div>
-						<a href="#" onclick="window.history.back();" class="btn btn-secondary mt-3">Volver</a>
-					</div>
-				</div>
+<!--		&lt;!&ndash; Page Heading/Breadcrumbs &ndash;&gt;-->
+<!--		<h1 class="mt-4 mb-3">-->
+<!--			GamerReach <small>Ordenes</small>-->
+<!--		</h1>-->
 
-			</section>
+<!--		<ol class="breadcrumb">-->
+<!--			<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>-->
+<!--			<li class="breadcrumb-item active">Reportes</li>-->
+<!--		</ol>-->
 
-		</main>
-	<!-- /.container -->
+<!--		&lt;!&ndash; Blog Post &ndash;&gt;-->
+<!--		<main class="main">-->
+<!--			&lt;!&ndash; Hero Section &ndash;&gt;-->
+<!--			<section id="hero" class="hero section">-->
 
-	<!-- Footer -->
-	<div th:replace="~{administrador/template_admin.html::footer}"></div>
+<!--				<div class="container">-->
+<!--					<div class="row gy-4">-->
+<!--						<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">-->
+<!--							<h1 data-aos="fade-up" th:text="${titulo}">Reporte de Productos</h1>-->
+<!--							<h3 data-aos="fade-up" th:text="${subtitulo}">titulo</h3>-->
+<!--						</div>-->
 
-	<!-- Bootstrap core JavaScript -->
-	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
-	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!--					</div>-->
+<!--				</div>-->
 
-		</div>
+<!--			</section>&lt;!&ndash; /Hero Section &ndash;&gt;-->
 
-</body>
+<!--			<section id="reportePreview">-->
+<!--				<div class="container">-->
+<!--					<form action="/reportes/report" method="get">-->
+<!--						<input type="hidden" name="parameter1" th:value="${parameter1}">-->
+<!--						<input type="hidden" name="parameter2" th:value="${parameter2}">-->
+<!--						<button type="submit" class="btn btn-primary btn-sm" th:text="'Exportar PDF'" title="Exportar a PDF..."></button>-->
+<!--					</form>-->
 
-</html>
+<!--					&lt;!&ndash; parámetro Reporte &ndash;&gt;-->
+<!--					<div class="card-body bg-light justify-content-center align-items-center">-->
+<!--						<div th:utext="${reporte}"></div>-->
+<!--						<a href="#" onclick="window.history.back();" class="btn btn-secondary mt-3">Volver</a>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--			</section>-->
+
+<!--		</main>-->
+<!--	&lt;!&ndash; /.container &ndash;&gt;-->
+
+<!--	&lt;!&ndash; Footer &ndash;&gt;-->
+<!--	<div th:replace="~{administrador/template_admin.html::footer}"></div>-->
+
+<!--	&lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
+<!--	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>-->
+<!--	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>-->
+
+<!--		</div>-->
+
+<!--</body>-->
+
+<!--</html>-->

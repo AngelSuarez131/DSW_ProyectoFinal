@@ -1,90 +1,90 @@
-<!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<!--<!DOCTYPE html>-->
+<!--<html lang="es" xmlns:th="http://www.thymeleaf.org">-->
 
-<head>
+<!--<head>-->
 
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<!--<meta charset="utf-8">-->
+<!--<meta name="viewport"-->
+<!--	content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--<meta name="description" content="">-->
+<!--<meta name="author" content="">-->
 
-	<title>GameReach</title>
-
-
-<!-- Bootstrap core CSS -->
-<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
-	rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link th:href="@{/css/heroic-features.css}" rel="stylesheet">
-
-</head>
-
-<body>
-
-	<!-- Navigation -->
-	<div th:replace="~{administrador/template_admin.html::header}"></div>
-
-	<!-- Page Content -->
-	<div class="container">
+<!--	<title>GameReach</title>-->
 
 
-		<!-- Page Heading/Breadcrumbs -->
-		<h1 class="mt-4 mb-3">
-			GamerReach <small>Ordenes</small>
-		</h1>
+<!--&lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
+<!--<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"-->
+<!--	rel="stylesheet">-->
 
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-			<li class="breadcrumb-item active">Reportes</li>
-		</ol>
+<!--&lt;!&ndash; Custom styles for this template &ndash;&gt;-->
+<!--<link th:href="@{/css/heroic-features.css}" rel="stylesheet">-->
 
-		<!-- Blog Post -->
-		<main class="main">
-			<!-- Hero Section -->
-			<section id="hero" class="hero section">
+<!--</head>-->
 
-				<div class="container">
-					<div class="row gy-4">
-						<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-							<h1 data-aos="fade-up" th:text="${titulo}">Reporte de Productos</h1>
-							<h3 data-aos="fade-up" th:text="${subtitulo}">titulo</h3>
-						</div>
+<!--<body>-->
 
-					</div>
-				</div>
+<!--	&lt;!&ndash; Navigation &ndash;&gt;-->
+<!--	<div th:replace="~{administrador/template_admin.html::header}"></div>-->
 
-			</section><!-- /Hero Section -->
+<!--	&lt;!&ndash; Page Content &ndash;&gt;-->
+<!--	<div class="container">-->
 
-			<section id="reporteProductos">
-				<div class="container">
-					<form action="/reportes/reportPreview" method="get" class="form-inline mt-3">
-						<div class="form-group">
-							<label for="parameter1" class="sr-only">Parámetro 1:</label>
-							<input type="text" id="parameter1" name="parameter1" class="form-control"
-								   placeholder="Parámetro 1" />
-							<label for="parameter2" class="sr-only">Parámetro 2:</label>
-							<input type="number" id="parameter2" name="parameter2" class="form-control"
-								   placeholder="Parámetro 2" />
-						</div>
-						<button type="submit" class="btn btn-secondary">Previsualizar Reporte</button>
-					</form>
-				</div>
-			</section>
 
-		</main>
-	<!-- /.container -->
+<!--		&lt;!&ndash; Page Heading/Breadcrumbs &ndash;&gt;-->
+<!--		<h1 class="mt-4 mb-3">-->
+<!--			GamerReach <small>Ordenes</small>-->
+<!--		</h1>-->
 
-	<!-- Footer -->
-	<div th:replace="~{administrador/template_admin.html::footer}"></div>
+<!--		<ol class="breadcrumb">-->
+<!--			<li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>-->
+<!--			<li class="breadcrumb-item active">Reportes</li>-->
+<!--		</ol>-->
 
-	<!-- Bootstrap core JavaScript -->
-	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
-	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!--		&lt;!&ndash; Blog Post &ndash;&gt;-->
+<!--		<main class="main">-->
+<!--			&lt;!&ndash; Hero Section &ndash;&gt;-->
+<!--			<section id="hero" class="hero section">-->
 
-		</div>
+<!--				<div class="container">-->
+<!--					<div class="row gy-4">-->
+<!--						<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">-->
+<!--							<h1 data-aos="fade-up" th:text="${titulo}">Reporte de Productos</h1>-->
+<!--							<h3 data-aos="fade-up" th:text="${subtitulo}">titulo</h3>-->
+<!--						</div>-->
 
-</body>
+<!--					</div>-->
+<!--				</div>-->
 
-</html>
+<!--			</section>&lt;!&ndash; /Hero Section &ndash;&gt;-->
+
+<!--			<section id="reporteProductos">-->
+<!--				<div class="container">-->
+<!--					<form action="/reportes/reportPreview" method="get" class="form-inline mt-3">-->
+<!--						<div class="form-group">-->
+<!--							<label for="parameter1" class="sr-only">Parámetro 1:</label>-->
+<!--							<input type="text" id="parameter1" name="parameter1" class="form-control"-->
+<!--								   placeholder="Parámetro 1" />-->
+<!--							<label for="parameter2" class="sr-only">Parámetro 2:</label>-->
+<!--							<input type="number" id="parameter2" name="parameter2" class="form-control"-->
+<!--								   placeholder="Parámetro 2" />-->
+<!--						</div>-->
+<!--						<button type="submit" class="btn btn-secondary">Previsualizar Reporte</button>-->
+<!--					</form>-->
+<!--				</div>-->
+<!--			</section>-->
+
+<!--		</main>-->
+<!--	&lt;!&ndash; /.container &ndash;&gt;-->
+
+<!--	&lt;!&ndash; Footer &ndash;&gt;-->
+<!--	<div th:replace="~{administrador/template_admin.html::footer}"></div>-->
+
+<!--	&lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
+<!--	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>-->
+<!--	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>-->
+
+<!--		</div>-->
+
+<!--</body>-->
+
+<!--</html>-->
